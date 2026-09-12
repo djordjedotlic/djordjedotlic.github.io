@@ -1,22 +1,14 @@
 <!DOCTYPE html>
+
 <html lang="sr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta
-    name="description"
-    content="Najnoviji rezultati političkih anketa sa trendovima i poređenjima između različitih instituta za istraživanje javnog mnjenja."
-  >
-  <title>Rejting političkih stranaka u Srbiji</title>
-
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  >
-
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-  <script id="mcjs">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Najnoviji rezultati političkih anketa sa trendovima i poređenjima između različitih instituta za istraživanje javnog mnjenja." name="description"/>
+<title>Rejting političkih stranaka u Srbiji</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script id="mcjs">
     !function(c,h,i,m,p){
       m=c.createElement(h),
       p=c.getElementsByTagName(h)[0],
@@ -29,16 +21,10 @@
       "https://chimpstatic.com/mcjs-connected/js/users/c28816bfa11031fb41d8142ea/ae0ccdcb3958f557639d6bbcc.js"
     );
   </script>
-
-  <link rel="stylesheet" href="styles.css">
+<link href="styles.css" rel="stylesheet"/>
 </head>
-
 <!-- Google tag (gtag.js) -->
-<script
-  async
-  src="https://www.googletagmanager.com/gtag/js?id=G-GKH6B4STV2"
-></script>
-
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-GKH6B4STV2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
 
@@ -49,650 +35,654 @@
   gtag('js', new Date());
   gtag('config', 'G-GKH6B4STV2');
 </script>
-
 <body>
-  <header class="text-white p-3 shadow">
-    <div class="container d-flex justify-content-between align-items-center">
-      <div class="logo">
-        <img src="rejpol.png" alt="Logo">
-      </div>
-    </div>
-  </header>
-
-  <main class="container">
-    <section>
-      <h1 class="h3 text-center my-4">
+<header class="text-white p-3 shadow">
+<div class="container d-flex justify-content-between align-items-center">
+<div class="logo">
+<img alt="Logo" src="rejpol.png"/>
+</div>
+</div>
+</header>
+<main class="container">
+<section>
+<h1 class="h3 text-center my-4">
         Rejting političkih partija u Srbiji
       </h1>
-    </section>
-
-    <!--
+</section>
+<!--
     <section>
       <h2 class="h5 mb-3">Trend rejtinga</h2>
       <canvas id="pollChart"></canvas>
     </section>
     -->
+<section>
+<h2 class="h5 my-3">Prosečni rezultati anketa po mesecima</h2>
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<th>Stranka</th>
+<th>09/2026</th>
+<th>07/2026</th>
+<th>06/2026</th>
+<th>04/2026</th>
+<th>10/2025</th>
+<th>08/2025</th>
+<th>07/2025</th>
+<th>05/2025</th>
+<th>12/2024</th>
+<th>11/2024</th>
+<th>10/2024</th>
+<th>09/2024</th>
+</tr>
+</thead>
+<tbody>
+<!-- Prosek NSPM i Nacija TV ankete za 07/2026 -->
+<tr>
+<td>SNS</td>
+<td>47.2</td>
+<td>40.8</td>
+<td>41.4</td>
+<td>46.4</td>
+<td>49.1</td>
+<td>48.2</td>
+<td>40.1</td>
+<td>35.1</td>
+<td>48</td>
+<td>36</td>
+<td>41.4</td>
+<td>46.8</td>
+</tr>
+<tr>
+<td>SPS</td>
+<td>4.9</td>
+<td>4.0</td>
+<td>4.4</td>
+<td>5.0</td>
+<td>4.7</td>
+<td>5.3</td>
+<td>6.7</td>
+<td>5.7</td>
+<td>6.65</td>
+<td>5.3</td>
+<td>6.5</td>
+<td>7.7</td>
+</tr>
+<!-- Proevropska opozicija agregirana pod SSP -->
+<tr>
+<td>SSP</td>
+<td>3.6 *</td>
+<td>3.3 *</td>
+<td>3.4 *</td>
+<td>8.6 *</td>
+<td>2.3</td>
+<td>5</td>
+<td>3.8</td>
+<td>3.5</td>
+<td>6.55</td>
+<td>7.8</td>
+<td>7.35</td>
+<td>6.9</td>
+</tr>
+<tr>
+<td>NDSS</td>
+<td>2.1 ***</td>
+<td>2.15 ***</td>
+<td>1.85</td>
+<td>2.5</td>
+<td>3.1</td>
+<td>2.6</td>
+<td>2.8</td>
+<td>3</td>
+<td>3.5</td>
+<td>4.1</td>
+<td>3.9</td>
+<td>3.7</td>
+</tr>
+<!-- KP = Kreni-Promeni -->
+<tr>
+<td>KP</td>
+<td></td>
+<td></td>
+<td>2.8</td>
+<td>1.8</td>
+<td>5.6</td>
+<td>6.2</td>
+<td>3</td>
+<td>2.8</td>
+<td>5.25</td>
+<td>5.7</td>
+<td>5.2</td>
+<td>4.7</td>
+</tr>
+<tr>
+<td>MI</td>
+<td>2.9</td>
+<td>3.3</td>
+<td>2.5</td>
+<td>3.0</td>
+<td>3.4</td>
+<td>2.9</td>
+<td>3.4</td>
+<td>3.2</td>
+<td>4.95</td>
+<td>5.5</td>
+<td>4.75</td>
+<td>4</td>
+</tr>
+<tr>
+<td>ZLF</td>
+<td></td>
+<td></td>
+<td>0.4</td>
+<td></td>
+<td>1.4</td>
+<td>2</td>
+<td>2.3</td>
+<td>3.1</td>
+<td>2.45</td>
+<td>4.2</td>
+<td>3.25</td>
+<td>2.3</td>
+</tr>
+<tr>
+<td>DS</td>
+<td></td>
+<td></td>
+<td>0.8</td>
+<td></td>
+<td>4.4</td>
+<td>2.1</td>
+<td>1.8</td>
+<td>x</td>
+<td>2.5</td>
+<td>2.3</td>
+<td>2.3</td>
+<td>x</td>
+</tr>
+<tr>
+<td>SRS</td>
+<td>2.0</td>
+<td></td>
+<td>1.7</td>
+<td>2.0</td>
+<td>1.9</td>
+<td>2</td>
+<td>1</td>
+<td>x</td>
+<td>2</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>NPS</td>
+<td>3.4 **</td>
+<td>3.65 **</td>
+<td>3.0 **</td>
+<td></td>
+<td>1.6</td>
+<td>3.3</td>
+<td>4.3</td>
+<td>4.3</td>
+<td>3.1</td>
+<td>2.8</td>
+<td>3.4</td>
+<td>4</td>
+</tr>
+<tr>
+<td>PSG</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>0.5</td>
+<td>1.1</td>
+<td></td>
+<td>1.5</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>SRCE</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.6</td>
+<td>0.9</td>
+<td>x</td>
+<td>x</td>
+<td>1.8</td>
+<td>2.9</td>
+<td>2.55</td>
+<td>2.2</td>
+</tr>
+<tr>
+<td>SVM</td>
+<td></td>
+<td></td>
 
-    <section>
-      <h2 class="h5 my-3">Prosečni rezultati anketa po mesecima</h2>
+<td>1.3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Zavetnici</td>
+<td></td>
+<td></td>
 
-      <div class="table-responsive">
-        <table class="table table-bordered table-striped">
-          <thead>
-            <tr>
-              <th>Stranka</th>
-              <th>07/2026</th>
-              <th>06/2026</th>
-              <th>04/2026</th>
-              <th>10/2025</th>
-              <th>08/2025</th>
-              <th>07/2025</th>
-              <th>05/2025</th>
-              <th>12/2024</th>
-              <th>11/2024</th>
-              <th>10/2024</th>
-              <th>09/2024</th>
-            </tr>
-          </thead>
+<td>0.9</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Studenti</td>
+<td>31.5</td>
+<td>40.6</td>
+<td>37.8</td>
+<td>28.7</td>
+<td>9.2</td>
+<td>8</td>
+<td>17.4</td>
+<td>20.5</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>Neka druga</td>
+<td>2.4</td>
+<td>2.2</td>
+<td>1.7</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+</tr>
+</tbody>
+</table>
+</div>
+<details class="border rounded p-3 mt-3 bg-light">
+<summary class="fw-semibold" style="cursor: pointer;">Objašnjenja rezultata</summary>
+<div class="mt-3">
+          * → Agregirani rezultat. Za 09/2026 Faktor Plus prikazuje pro-evropsku
+          koaliciju SSP/SRCE/PSG sa 3.6. Za 07/2026 NSPM prikazuje koaliciju
+          SSP/SRCE/PSG sa 4.2, dok Nacija TV prikazuje SSP/SRCE sa 2.4.
+          Prosek je 3.3. Za 06/2026 rezultat CRTA za SSP, PSG i SRCE iznosi
+          ukupno 2.3, dok Faktor Plus navodi agregirani rezultat od 4.5.
+          Prosek je 3.4. Za 04/2026: SSP/NPS/ZLF/PSG/SRCE/SDS.
+          <br/><br/>
 
-          <tbody>
-            <!-- Prosek NSPM i Nacija TV ankete za 07/2026 -->
-            <tr>
-              <td>SNS</td>
-              <td>40.8</td>
-              <td>41.4</td>
-              <td>46.4</td>
-              <td>49.1</td>
-              <td>48.2</td>
-              <td>40.1</td>
-              <td>35.1</td>
-              <td>48</td>
-              <td>36</td>
-              <td>41.4</td>
-              <td>46.8</td>
-            </tr>
+          ** → Za 09/2026 Faktor Plus prikazuje koaliciju Narodni pokret Srbije /
+          Novo lice Srbije / Ekološki ustanak sa 3.4. Za 07/2026 NSPM prikazuje
+          koaliciju NPS/NLS/Ekološki ustanak/Pokret za decentralizaciju sa 5.6,
+          dok Nacija TV prikazuje NPS samostalno sa 1.7. Prosek je 3.65.
+          Faktor Plus za 06/2026 prikazuje koaliciju NPS/NLS sa 3.8, dok CRTA
+          prikazuje NPS samostalno sa 2.2. Prosečna vrednost za 06/2026 je 3.0.
+          <br/><br/>
 
-            <tr>
-              <td>SPS</td>
-              <td>4.0</td>
-              <td>4.4</td>
-              <td>5.0</td>
-              <td>4.7</td>
-              <td>5.3</td>
-              <td>6.7</td>
-              <td>5.7</td>
-              <td>6.65</td>
-              <td>5.3</td>
-              <td>6.5</td>
-              <td>7.7</td>
-            </tr>
+          *** → Za 09/2026 Faktor Plus prikazuje koaliciju NADA (NDSS/POKS) sa
+          2.1. Za 07/2026 NSPM prikazuje NDSS samostalno sa 2.3, dok Nacija TV
+          prikazuje koaliciju NADA (NDSS/POKS) sa 2.0. Prosek je 2.15.
+          <br/><br/>
 
-            <!-- Proevropska opozicija agregirana pod SSP -->
-            <tr>
-              <td>SSP</td>
-              <td>3.3 *</td>
-              <td>3.4 *</td>
-              <td>8.6 *</td>
-              <td>2.3</td>
-              <td>5</td>
-              <td>3.8</td>
-              <td>3.5</td>
-              <td>6.55</td>
-              <td>7.8</td>
-              <td>7.35</td>
-              <td>6.9</td>
-            </tr>
+          Faktor Plus rezultati za 09/2026 objavljeni su 4. septembra 2026.
+          CRTA rezultati za 06/2026 i NSPM rezultati za 07/2026 odnose se na
+          opredeljene birače. NSPM anketa je objavljena 30. jula 2026. Nacija
+          TV anketa je u tabelama svrstana u 07/2026, iako je objavljena
+          3. avgusta 2026.
+        </div>
+</details>
+</section>
+<section>
+<h2 class="h5 my-3">Poređenje rezultata različitih instituta</h2>
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<th>Institut</th>
+<th>Faktor Plus</th>
+<th>Nacija TV</th>
+<th>NSPM</th>
+<th>CRTA</th>
+<th>Faktor Plus</th>
+<th>Faktor Plus</th>
+<th>Ipsos</th>
+<th>Ipsos</th>
+<th>Ipsos</th>
+<th>Faktor Plus</th>
+<th>NSPM</th>
+<th>NSPM</th>
+<th>Poslednji izbori</th>
+</tr>
+<tr>
+<th>Period rezultata</th>
+<th>09/2026</th>
+<th>07/2026</th>
+<th>07/2026</th>
+<th>06/2026</th>
+<th>06/2026</th>
+<th>04/2026</th>
+<th>10/2025</th>
+<th>08/2025</th>
+<th>07/2025</th>
+<th>07/2025</th>
+<th>07/2025</th>
+<th>05/2025</th>
+<th>12/2023</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SNS</td>
+<td>47.2</td>
+<td>44.1</td>
+<td>37.5</td>
+<td>35.7</td>
+<td>47.1</td>
+<td>46.4</td>
+<td>49.1</td>
+<td>48.2</td>
+<td>46.6</td>
+<td>45.1</td>
+<td>40.2</td>
+<td>35.1</td>
+<td>48.06</td>
+</tr>
+<tr>
+<td>SPS</td>
+<td>4.9</td>
+<td>3.1</td>
+<td>4.9</td>
+<td>3.8</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>4.7</td>
+<td>5.3</td>
+<td>6.4</td>
+<td>6.9</td>
+<td>uz SNS</td>
+<td>5.7</td>
+<td>6.73</td>
+</tr>
+<tr>
+<td>SSP</td>
+<td>3.6 *</td>
+<td>2.4 *</td>
+<td>4.2 *</td>
+<td>0.9</td>
+<td>4.5 *</td>
+<td>8.6 *</td>
+<td>2.3</td>
+<td>5</td>
+<td>4.1</td>
+<td>4.3</td>
+<td>3.6</td>
+<td>3.4</td>
+<td>24.32</td>
+</tr>
+<tr>
+<td>NDSS</td>
+<td>2.1 ***</td>
+<td>2.0 ***</td>
+<td>2.3</td>
+<td>1.5</td>
+<td>2.2</td>
+<td>2.5</td>
+<td>3.1</td>
+<td>2.6</td>
+<td>2.7</td>
+<td>2.8</td>
+<td>2.7</td>
+<td>3</td>
+<td>5.16</td>
+</tr>
+<tr>
+<td>KP</td>
+<td></td>
+<td>x</td>
+<td>x</td>
+<td>2.8</td>
+<td></td>
+<td>1.8</td>
+<td>5.6</td>
+<td>6.2</td>
+<td>6.8</td>
+<td>3.7</td>
+<td>2.5</td>
+<td>2.8</td>
+<td>novi</td>
+</tr>
+<tr>
+<td>MI</td>
+<td>2.9</td>
+<td>2.8</td>
+<td>3.8</td>
+<td>2.0</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>3.4</td>
+<td>2.9</td>
+<td>3.5</td>
+<td>4.1</td>
+<td>2.8</td>
+<td>3.2</td>
+<td>4.82</td>
+</tr>
+<tr>
+<td>ZLF</td>
+<td></td>
+<td>x</td>
+<td>x</td>
+<td>0.4</td>
+<td></td>
+<td></td>
+<td>1.4</td>
+<td>2</td>
+<td>2.1</td>
+<td>2.5</td>
+<td>1.2</td>
+<td>3.1</td>
+<td>uz SSP</td>
+</tr>
+<tr>
+<td>DS</td>
+<td></td>
+<td>x</td>
+<td>x</td>
+<td>0.8</td>
+<td></td>
+<td></td>
+<td>4.4</td>
+<td>2.1</td>
+<td>3.1</td>
+<td>2.1</td>
+<td>1.5</td>
+<td>x</td>
+<td>uz SSP</td>
+</tr>
+<tr>
+<td>SRS</td>
+<td>2.0</td>
+<td></td>
+<td></td>
+<td>1.4</td>
+<td>2.0</td>
+<td>2.0</td>
+<td>1.9</td>
+<td>2</td>
+<td>1.7</td>
+<td>1</td>
+<td>x</td>
+<td>x</td>
+<td>1.5</td>
+</tr>
+<tr>
+<td>NPS</td>
+<td>3.4 **</td>
+<td>1.7</td>
+<td>5.6 **</td>
+<td>2.2</td>
+<td>3.8 **</td>
+<td></td>
+<td>1.6</td>
+<td>3.3</td>
+<td>2.5</td>
+<td>4.1</td>
+<td>4.5</td>
+<td>4.3</td>
+<td>uz SSP</td>
+</tr>
+<tr>
+<td>PSG</td>
+<td>uz SSP</td>
+<td></td>
+<td>uz SSP</td>
+<td>1.0</td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>0.5</td>
+<td>0.6</td>
+<td>1.1</td>
+<td>x</td>
+<td>x</td>
+<td>uz SSP</td>
+</tr>
+<tr>
+<td>SRCE</td>
+<td>uz SSP</td>
+<td>uz SSP</td>
+<td>uz SSP</td>
+<td>0.4</td>
+<td></td>
+<td></td>
+<td>0.6</td>
+<td>0.9</td>
+<td>1.7</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>uz SSP</td>
+</tr>
+<tr>
+<td>SVM</td>
+<td></td>
+<td></td>
+<td></td><td>1.3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Zavetnici</td>
+<td></td>
+<td></td>
+<td></td><td>0.9</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Studenti</td>
+<td>31.5</td>
+<td>41.6</td>
+<td>39.6</td>
+<td>44.9</td>
+<td>30.7</td>
+<td>28.7</td>
+<td>9.2</td>
+<td>8</td>
+<td>5</td>
+<td>8.4</td>
+<td>23.2</td>
+<td>20.5</td>
+<td>novi</td>
+</tr>
+<tr>
+<td>Neka druga</td>
+<td>2.4</td>
+<td>2.3</td>
+<td>2.1</td>
+<td></td>
+<td>1.7</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>x</td>
+</tr>
+</tbody>
+</table>
+</div>
+<details class="border rounded p-3 mt-3 bg-light">
+<summary class="fw-semibold" style="cursor: pointer;">Objašnjenja rezultata</summary>
+<div class="mt-3">
+          * → Agregirani rezultat. Za Faktor Plus 09/2026: SSP/SRCE/PSG.
+          Za Nacija TV 07/2026: SSP/SRCE. Za NSPM 07/2026: SSP/SRCE/PSG.
+          Za Faktor Plus 06/2026: SSP/SRCE/PSG. Za Faktor Plus 04/2026:
+          SSP/NPS/ZLF/PSG/SRCE/SDS.
+          <br/><br/>
 
-            <tr>
-              <td>NDSS</td>
-              <td>2.15 ***</td>
-              <td>1.85</td>
-              <td>2.5</td>
-              <td>3.1</td>
-              <td>2.6</td>
-              <td>2.8</td>
-              <td>3</td>
-              <td>3.5</td>
-              <td>4.1</td>
-              <td>3.9</td>
-              <td>3.7</td>
-            </tr>
+          ** → Za Faktor Plus 09/2026: NPS/NLS/Ekološki ustanak.
+          Za NSPM 07/2026: NPS/NLS/Ekološki ustanak/Pokret za decentralizaciju.
+          Za Faktor Plus 06/2026: NPS/NLS.
+          <br/><br/>
 
-            <!-- KP = Kreni-Promeni -->
-            <tr>
-              <td>KP</td>
-              <td></td>
-              <td>2.8</td>
-              <td>1.8</td>
-              <td>5.6</td>
-              <td>6.2</td>
-              <td>3</td>
-              <td>2.8</td>
-              <td>5.25</td>
-              <td>5.7</td>
-              <td>5.2</td>
-              <td>4.7</td>
-            </tr>
+          *** → Za Faktor Plus 09/2026 i Nacija TV 07/2026 rezultat se odnosi
+          na koaliciju NADA (NDSS/POKS), dok NSPM prikazuje NDSS samostalno.
+          <br/><br/>
 
-            <tr>
-              <td>MI</td>
-              <td>3.3</td>
-              <td>2.5</td>
-              <td>3.0</td>
-              <td>3.4</td>
-              <td>2.9</td>
-              <td>3.4</td>
-              <td>3.2</td>
-              <td>4.95</td>
-              <td>5.5</td>
-              <td>4.75</td>
-              <td>4</td>
-            </tr>
-
-            <tr>
-              <td>ZLF</td>
-              <td></td>
-              <td>0.4</td>
-              <td></td>
-              <td>1.4</td>
-              <td>2</td>
-              <td>2.3</td>
-              <td>3.1</td>
-              <td>2.45</td>
-              <td>4.2</td>
-              <td>3.25</td>
-              <td>2.3</td>
-            </tr>
-
-            <tr>
-              <td>DS</td>
-              <td></td>
-              <td>0.8</td>
-              <td></td>
-              <td>4.4</td>
-              <td>2.1</td>
-              <td>1.8</td>
-              <td>x</td>
-              <td>2.5</td>
-              <td>2.3</td>
-              <td>2.3</td>
-              <td>x</td>
-            </tr>
-
-            <tr>
-              <td>SRS</td>
-              <td></td>
-              <td>1.7</td>
-              <td>2.0</td>
-              <td>1.9</td>
-              <td>2</td>
-              <td>1</td>
-              <td>x</td>
-              <td>2</td>
-              <td>x</td>
-              <td>x</td>
-              <td>x</td>
-            </tr>
-
-            <tr>
-              <td>NPS</td>
-              <td>3.65 **</td>
-              <td>3.0 **</td>
-              <td></td>
-              <td>1.6</td>
-              <td>3.3</td>
-              <td>4.3</td>
-              <td>4.3</td>
-              <td>3.1</td>
-              <td>2.8</td>
-              <td>3.4</td>
-              <td>4</td>
-            </tr>
-
-            <tr>
-              <td>PSG</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>1</td>
-              <td>0.5</td>
-              <td>1.1</td>
-              <td></td>
-              <td>1.5</td>
-              <td>x</td>
-              <td>x</td>
-              <td>x</td>
-            </tr>
-
-            <tr>
-              <td>SRCE</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>0.6</td>
-              <td>0.9</td>
-              <td>x</td>
-              <td>x</td>
-              <td>1.8</td>
-              <td>2.9</td>
-              <td>2.55</td>
-              <td>2.2</td>
-            </tr>
-
-            <tr>
-              <td>SVM</td>
-              <td></td>
-              <td>1.3</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-
-            <tr>
-              <td>Zavetnici</td>
-              <td></td>
-              <td>0.9</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-
-            <tr>
-              <td>Studenti</td>
-              <td>40.6</td>
-              <td>37.8</td>
-              <td>28.7</td>
-              <td>9.2</td>
-              <td>8</td>
-              <td>17.4</td>
-              <td>20.5</td>
-              <td>x</td>
-              <td>x</td>
-              <td>x</td>
-              <td>x</td>
-            </tr>
-
-            <tr>
-              <td>Neka druga</td>
-              <td>2.2</td>
-              <td>1.7</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>x</td>
-              <td>x</td>
-              <td>x</td>
-              <td>x</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div>
-        * → Agregirani rezultat. Za 07/2026 NSPM prikazuje koaliciju
-        SSP/SRCE/PSG sa 4.2, dok Nacija TV prikazuje SSP/SRCE sa 2.4.
-        Prosek je 3.3. Za 06/2026 rezultat CRTA za SSP, PSG i SRCE iznosi
-        ukupno 2.3, dok Faktor Plus navodi agregirani rezultat od 4.5.
-        Prosek je 3.4. Za 04/2026: SSP/NPS/ZLF/PSG/SRCE/SDS.
-        <br>
-
-        ** → Za 07/2026 NSPM prikazuje koaliciju NPS/NLS/Ekološki ustanak/
-        Pokret za decentralizaciju sa 5.6, dok Nacija TV prikazuje NPS
-        samostalno sa 1.7. Prosek je 3.65. Faktor Plus za 06/2026 prikazuje
-        koaliciju NPS/NLS sa 3.8, dok CRTA prikazuje NPS samostalno sa 2.2.
-        Prosečna vrednost za 06/2026 je 3.0.
-        <br>
-
-        *** → Za 07/2026 NSPM prikazuje NDSS samostalno sa 2.3, dok Nacija
-        TV prikazuje koaliciju NADA (NDSS/POKS) sa 2.0. Prosek je 2.15.
-        <br>
-
-        CRTA rezultati za 06/2026 i NSPM rezultati za 07/2026 odnose se na
-        opredeljene birače. NSPM anketa je objavljena 30. jula 2026. Nacija
-        TV anketa je u tabelama svrstana u 07/2026, iako je objavljena
-        3. avgusta 2026.
-      </div>
-    </section>
-
-    <section>
-      <h2 class="h5 my-3">Poređenje rezultata različitih instituta</h2>
-
-      <div class="table-responsive">
-        <table class="table table-bordered table-striped">
-          <thead>
-            <tr>
-              <th>Institut</th>
-              <th>Nacija TV</th>
-              <th>NSPM</th>
-              <th>CRTA</th>
-              <th>Faktor Plus</th>
-              <th>Faktor Plus</th>
-              <th>Ipsos</th>
-              <th>Ipsos</th>
-              <th>Ipsos</th>
-              <th>Faktor Plus</th>
-              <th>NSPM</th>
-              <th>NSPM</th>
-              <th>Poslednji izbori</th>
-            </tr>
-
-            <tr>
-              <th>Period rezultata</th>
-              <th>07/2026</th>
-              <th>07/2026</th>
-              <th>06/2026</th>
-              <th>06/2026</th>
-              <th>04/2026</th>
-              <th>10/2025</th>
-              <th>08/2025</th>
-              <th>07/2025</th>
-              <th>07/2025</th>
-              <th>07/2025</th>
-              <th>05/2025</th>
-              <th>12/2023</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-              <td>SNS</td>
-              <td>44.1</td>
-              <td>37.5</td>
-              <td>35.7</td>
-              <td>47.1</td>
-              <td>46.4</td>
-              <td>49.1</td>
-              <td>48.2</td>
-              <td>46.6</td>
-              <td>45.1</td>
-              <td>40.2</td>
-              <td>35.1</td>
-              <td>48.06</td>
-            </tr>
-
-            <tr>
-              <td>SPS</td>
-              <td>3.1</td>
-              <td>4.9</td>
-              <td>3.8</td>
-              <td>5.0</td>
-              <td>5.0</td>
-              <td>4.7</td>
-              <td>5.3</td>
-              <td>6.4</td>
-              <td>6.9</td>
-              <td>uz SNS</td>
-              <td>5.7</td>
-              <td>6.73</td>
-            </tr>
-
-            <tr>
-              <td>SSP</td>
-              <td>2.4 *</td>
-              <td>4.2 *</td>
-              <td>0.9</td>
-              <td>4.5 *</td>
-              <td>8.6 *</td>
-              <td>2.3</td>
-              <td>5</td>
-              <td>4.1</td>
-              <td>4.3</td>
-              <td>3.6</td>
-              <td>3.4</td>
-              <td>24.32</td>
-            </tr>
-
-            <tr>
-              <td>NDSS</td>
-              <td>2.0 ***</td>
-              <td>2.3</td>
-              <td>1.5</td>
-              <td>2.2</td>
-              <td>2.5</td>
-              <td>3.1</td>
-              <td>2.6</td>
-              <td>2.7</td>
-              <td>2.8</td>
-              <td>2.7</td>
-              <td>3</td>
-              <td>5.16</td>
-            </tr>
-
-            <tr>
-              <td>KP</td>
-              <td>x</td>
-              <td>x</td>
-              <td>2.8</td>
-              <td></td>
-              <td>1.8</td>
-              <td>5.6</td>
-              <td>6.2</td>
-              <td>6.8</td>
-              <td>3.7</td>
-              <td>2.5</td>
-              <td>2.8</td>
-              <td>novi</td>
-            </tr>
-
-            <tr>
-              <td>MI</td>
-              <td>2.8</td>
-              <td>3.8</td>
-              <td>2.0</td>
-              <td>3.0</td>
-              <td>3.0</td>
-              <td>3.4</td>
-              <td>2.9</td>
-              <td>3.5</td>
-              <td>4.1</td>
-              <td>2.8</td>
-              <td>3.2</td>
-              <td>4.82</td>
-            </tr>
-
-            <tr>
-              <td>ZLF</td>
-              <td>x</td>
-              <td>x</td>
-              <td>0.4</td>
-              <td></td>
-              <td></td>
-              <td>1.4</td>
-              <td>2</td>
-              <td>2.1</td>
-              <td>2.5</td>
-              <td>1.2</td>
-              <td>3.1</td>
-              <td>uz SSP</td>
-            </tr>
-
-            <tr>
-              <td>DS</td>
-              <td>x</td>
-              <td>x</td>
-              <td>0.8</td>
-              <td></td>
-              <td></td>
-              <td>4.4</td>
-              <td>2.1</td>
-              <td>3.1</td>
-              <td>2.1</td>
-              <td>1.5</td>
-              <td>x</td>
-              <td>uz SSP</td>
-            </tr>
-
-            <tr>
-              <td>SRS</td>
-              <td></td>
-              <td></td>
-              <td>1.4</td>
-              <td>2.0</td>
-              <td>2.0</td>
-              <td>1.9</td>
-              <td>2</td>
-              <td>1.7</td>
-              <td>1</td>
-              <td>x</td>
-              <td>x</td>
-              <td>1.5</td>
-            </tr>
-
-            <tr>
-              <td>NPS</td>
-              <td>1.7</td>
-              <td>5.6 **</td>
-              <td>2.2</td>
-              <td>3.8 **</td>
-              <td></td>
-              <td>1.6</td>
-              <td>3.3</td>
-              <td>2.5</td>
-              <td>4.1</td>
-              <td>4.5</td>
-              <td>4.3</td>
-              <td>uz SSP</td>
-            </tr>
-
-            <tr>
-              <td>PSG</td>
-              <td></td>
-              <td>uz SSP</td>
-              <td>1.0</td>
-              <td></td>
-              <td></td>
-              <td>1</td>
-              <td>0.5</td>
-              <td>0.6</td>
-              <td>1.1</td>
-              <td>x</td>
-              <td>x</td>
-              <td>uz SSP</td>
-            </tr>
-
-            <tr>
-              <td>SRCE</td>
-              <td>uz SSP</td>
-              <td>uz SSP</td>
-              <td>0.4</td>
-              <td></td>
-              <td></td>
-              <td>0.6</td>
-              <td>0.9</td>
-              <td>1.7</td>
-              <td>x</td>
-              <td>x</td>
-              <td>x</td>
-              <td>uz SSP</td>
-            </tr>
-
-            <tr>
-              <td>SVM</td>
-              <td></td>
-              <td></td>
-              <td>1.3</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-
-            <tr>
-              <td>Zavetnici</td>
-              <td></td>
-              <td></td>
-              <td>0.9</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-
-            <tr>
-              <td>Studenti</td>
-              <td>41.6</td>
-              <td>39.6</td>
-              <td>44.9</td>
-              <td>30.7</td>
-              <td>28.7</td>
-              <td>9.2</td>
-              <td>8</td>
-              <td>5</td>
-              <td>8.4</td>
-              <td>23.2</td>
-              <td>20.5</td>
-              <td>novi</td>
-            </tr>
-
-            <tr>
-              <td>Neka druga</td>
-              <td>2.3</td>
-              <td>2.1</td>
-              <td></td>
-              <td>1.7</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>x</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div>
-        * → Agregirani rezultat. Za Nacija TV 07/2026: SSP/SRCE.
-        Za NSPM 07/2026: SSP/SRCE/PSG. Za Faktor Plus 06/2026:
-        SSP/SRCE/PSG. Za Faktor Plus 04/2026: SSP/NPS/ZLF/PSG/SRCE/SDS.
-        <br>
-
-        ** → Za NSPM 07/2026: NPS/NLS/Ekološki ustanak/Pokret za
-        decentralizaciju. Za Faktor Plus 06/2026: NPS/NLS.
-        <br>
-
-        *** → Za Nacija TV 07/2026 rezultat 2.0 odnosi se na koaliciju
-        NADA (NDSS/POKS), dok NSPM prikazuje NDSS samostalno.
-        <br>
-
-        CRTA rezultati za 06/2026 i NSPM rezultati za 07/2026 odnose se na
-        opredeljene birače. NSPM anketa je objavljena 30. jula 2026. Nacija
-        TV anketa je u tabelama svrstana u 07/2026, iako je objavljena
-        3. avgusta 2026. SNS je prikazan kao koalicija predvođena SNS-om,
-        SPS kao SPS–JS, a MI kao MI–SN.
-      </div>
-    </section>
-
-    <section class="container my-4">
-      <h2 class="h5">O projektu</h2>
-
-      <p>
+          Faktor Plus rezultati za 09/2026 objavljeni su 4. septembra 2026.
+          CRTA rezultati za 06/2026 i NSPM rezultati za 07/2026 odnose se na
+          opredeljene birače. NSPM anketa je objavljena 30. jula 2026. Nacija
+          TV anketa je u tabelama svrstana u 07/2026, iako je objavljena
+          3. avgusta 2026. SNS je prikazan kao koalicija predvođena SNS-om,
+          SPS kao SPS–JS, a MI kao MI–SN.
+        </div>
+</details>
+</section>
+<section class="container my-4">
+<h2 class="h5">O projektu</h2>
+<p>
         Ova stranica prati
         <strong>rejtinge političkih stranaka u Srbiji</strong>
         na osnovu najnovijih <strong>anketa</strong> i istraživanja javnog
@@ -700,43 +690,32 @@
         <em>trendove popularnosti</em> glavnih partija, prosečne rezultate
         anketa po mesecima i poređenje podataka različitih agencija.
       </p>
-
-      <p>
+<p>
         Podaci dolaze iz relevantnih izvora kao što su CRTA, Ipsos,
         Faktor Plus i NSPM, i predstavljeni su kroz tabele i grafikone radi
         lakšeg poređenja. Cilj projekta je da omogući transparentan uvid u
         to kako se menja podrška političkim akterima.
       </p>
-
-      <p>
+<p>
         Projekat je nezavisan i samofinansiran kako bi građani i istraživači
         imali pouzdano mesto za praćenje
         <strong>rezultata političkih anketa u Srbiji</strong>.
       </p>
-    </section>
-  </main>
-
-  <footer class="text-center py-4 bg-light mt-4">
-    <p class="mb-0">
+</section>
+</main>
+<footer class="text-center py-4 bg-light mt-4">
+<p class="mb-0">
       Kontakt:
       <a href="mailto:rejpol@proton.me">rejpol@proton.me</a>
-    </p>
-
-    <p class="mb-0">
+</p>
+<p class="mb-0">
       Napravljeno sa 💖 u
-      <a
-        href="https://www.google.com/maps/place/Dr%C5%BEina,+Serbia"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a href="https://www.google.com/maps/place/Dr%C5%BEina,+Serbia" rel="noopener noreferrer" target="_blank">
         Držini
       </a>
-    </p>
-  </footer>
-
-  <script src="script.js"></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-  ></script>
+</p>
+</footer>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
